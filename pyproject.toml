@@ -32,8 +32,8 @@ dependencies = [
     "safetensors",
     "soundfile",
     "tomli",
-    "torch==2.4.0",
-    "torchaudio==2.4.0",
+    "torch>=2.5.1",
+    "torchaudio",
     "torchdiffeq",
     "tqdm>=4.65.0",
     "transformers",
@@ -63,14 +63,14 @@ Homepage = "https://github.com/SWivid/F5-TTS"
 "f5-tts_finetune-gradio" = "f5_tts.train.finetune_gradio:main"
 
 [[tool.uv.index]]
-name = "pytorch-cu121"
-url = "https://download.pytorch.org/whl/cu121"
+name = "pytorch-cu126"
+url = "https://download.pytorch.org/whl/cu126"
 explicit = true
 
 [tool.uv.sources]
 torch = [
-  { index = "pytorch-cu121", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+  { index = "pytorch-cu126", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
 ]
 torchaudio = [
-  { index = "pytorch-cu121", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+  { index = "pytorch-cu126", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
 ]
